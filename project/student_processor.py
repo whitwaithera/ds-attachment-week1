@@ -1,20 +1,27 @@
 import csv
 
-# 1. Raw Data (Simulating data you might get from a CSV or API)
+# ==========================================
+# STEP 1: Raw Data (Simulating a dataset)
+# ==========================================
 students_data = [
-    {"name": "Brian", "lifeskills": 85, "web_development": 90, "structured_cabling": 78},
-    {"name": "Kevin", "lifeskills": 45, "web_development": 55, "structured_cabling": 60},
-    {"name": "Faith", "lifeskills": 95, "web_development": 92, "structured_cabling": 98},
-    {"name": "Amina", "lifeskills": 30, "web_development": 40, "structured_cabling": 35},
-    {"name": "Dennis", "lifeskills": 70, "web_development": 75, "structured_cabling": 80}
+    {"name": "Alice", "math": 85, "science": 90, "history": 78},
+    {"name": "Bob", "math": 45, "science": 55, "history": 60},
+    {"name": "Charlie", "math": 95, "science": 92, "history": 98},
+    {"name": "Diana", "math": 30, "science": 40, "history": 35},
+    {"name": "Ethan", "math": 70, "science": 75, "history": 80}
 ]
 
+# ==========================================
+# STEP 2: Calculate Average Function
+# ==========================================
 def calculate_average(student):
     """Calculates the average score for a single student."""
-    # Updated keys to match the new subjects
-    scores = [student["lifeskills"], student["web_development"], student["structured_cabling"]]
+    scores = [student["math"], student["science"], student["history"]]
     return sum(scores) / len(scores)
 
+# ==========================================
+# STEP 3: Process Data Function
+# ==========================================
 def process_students(data):
     """Processes the data to add averages and filter passing students."""
     processed_data = []
@@ -34,6 +41,9 @@ def process_students(data):
             
     return processed_data, passing_students
 
+# ==========================================
+# STEP 4: Save to File Function
+# ==========================================
 def save_to_file(data, filename):
     """Saves the processed data to a CSV file."""
     try:
@@ -45,14 +55,16 @@ def save_to_file(data, filename):
     except Exception as e:
         print(f"An error occurred while saving the file: {e}")
 
-# Main Execution
+# ==========================================
+# STEP 5: Main Execution
+# ==========================================
 if __name__ == "__main__":
     print("Starting data processing...")
     
-    # Process the data
+    # 1. Process the data
     all_processed, passing_only = process_students(students_data)
     
-    # Print results to console
+    # 2. Print results to console
     print("\n--- All Students ---")
     for record in all_processed:
         print(record)
@@ -61,5 +73,5 @@ if __name__ == "__main__":
     for record in passing_only:
         print(record)
         
-    # Save the passing students to a CSV file
+    # 3. Save the passing students to a CSV file
     save_to_file(passing_only, "passing_students.csv")
