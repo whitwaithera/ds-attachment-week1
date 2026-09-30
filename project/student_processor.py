@@ -4,11 +4,10 @@ import csv
 # STEP 1: Raw Data (Simulating a dataset)
 # ==========================================
 students_data = [
-    {"name": "Alice", "math": 85, "science": 90, "history": 78},
-    {"name": "Bob", "math": 45, "science": 55, "history": 60},
-    {"name": "Charlie", "math": 95, "science": 92, "history": 98},
-    {"name": "Diana", "math": 30, "science": 40, "history": 35},
-    {"name": "Ethan", "math": 70, "science": 75, "history": 80}
+    {"name": "Brian", "math": 85, "science": 90, "history": 78},
+    {"name": "Kevin", "math": 45, "science": 55, "history": 60},
+    {"name": "Faith", "math": 95, "science": 92, "history": 98},
+    {"name": "Dennis", "math": 30, "science": 40, "history": 35},
 ]
 
 # ==========================================

@@ -1,6 +1,6 @@
 #variables&datatypes
 
-name = "Your Name"
+name = "Annabelle"
 age = 22
 height = 1.75
 print(f"My name is {name}, I am {age} years old, and I am {height}m tall.")
@@ -25,7 +25,7 @@ scores = [85, 90, 78, 92, 88]
 print(f"Average score: {calculate_average(scores)}") 
 
 #Error handling
-# 1. Ask the user for a number and divide 100 by it.
+# 1. Take a number and divide 100 by it.
 # 2. Use try/except to handle if they enter 0 or a letter.
 try:
     user_input = input("Enter a number to divide 100 by: ")
@@ -36,3 +36,4 @@ except ValueError:
     print("Error: That was not a valid number.")
 except ZeroDivisionError:
     print("Error: You cannot divide by zero.")
+ 
